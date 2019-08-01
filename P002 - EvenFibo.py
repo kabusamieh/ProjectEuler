@@ -7,12 +7,11 @@
 #   @author     Khalid Abusamieh
 #   @date       07/31/2019
 #
-#   [WARNING]   Running with a high val (such as the requested 4 million) will
-#               greatly strain a PC.
+#   [WARNING]   Running with a high val will greatly strain a PC.
 #
 
-#### Sequence Cap ####
-val = 4000000
+#### Sequence Cap, can be any high number really ####
+val = 100
 
 ##  @fn     fibo()
 #
@@ -35,7 +34,6 @@ def fibo():
        print("Error, val must be greater than 0")
        
     else:
-       print("Sum of Even Fibonacci numbers upto",val,":")
        while count < val:
            k = i + j
 
@@ -43,7 +41,9 @@ def fibo():
            j = k
            count += 1
 
-           if i % 2 == 0:
+           # Stop! Fibonacci number must not go higher than 4,000,000!
+           # [i % 2 == 0] Detects division by 2 for Even numbers
+           if i < 4000000 and i % 2 == 0:
                foo.append(i)
            
     print(sum(foo))
