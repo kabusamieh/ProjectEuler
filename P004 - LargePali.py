@@ -19,12 +19,9 @@
 #   @note   N/A
 #
 def bigPalindrome():
-    ints = []
-    jays = []
     palis = []
     for i in range(1000):
         if len(str(i)) == 3:
-            ints.append(i)
             for n in range(1000):
                 if len(str(n)) == 3:
                     j = i * n
