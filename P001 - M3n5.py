@@ -9,12 +9,11 @@
 #
 
 
-##  @fn     multi(m,count)
+##  @fn     multi(m)
 #
 #   @brief  Finds all multiples of an integer and puts them in a list.
 #
 #   @param  m = Integer whose multiples you seek
-#   @param  count = (1000/m) in this case, or just a range.
 #
 #   @return List of multiples
 #
@@ -22,10 +21,10 @@
 #
 #   @note   N/A
 #
-def multi(m,count):
+def multi(m):
     foo = []
     
-    for i in range(0,count*m,m):
+    for i in range(0,1000,m):
         if m == 5:
             foo.append(i)
         elif m == 3:
@@ -37,9 +36,13 @@ def multi(m,count):
     #print(foo)
     return foo
 
-# Get sum of Multis
-var1 = (sum(multi(5,200)))
-var2 = (sum(multi(3,334)))
+fiv = multi(5)
+thr = multi(3)
 
-# Print sum of both Multis
-print(var1 + var2)
+infiv = set(fiv)
+inthr = set(thr)
+
+fivthrunq = inthr - infiv
+
+result = fiv + list(fivthrunq)
+print(sum(result))
