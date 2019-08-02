@@ -25,6 +25,6 @@ def main():
         k = i ** j
         foo.append(k)
 
-    print(sum(foo))
+    print(str(sum(foo))[-10:])
     
 main()
