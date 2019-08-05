@@ -8,7 +8,7 @@
 #   @date       08/05/2019
 #
 
-##  @fn     checkDiv()
+##  @fn     checkDiv(n, lst)
 #
 #   @brief  Checks for a lack of remainder.
 #
